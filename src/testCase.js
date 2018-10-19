@@ -17,16 +17,13 @@ class testCase {
 
 	// TODO but not like this : https://www.monkeyuser.com/2017/todo/
 	getExecutions(){
-		var i=0;
-		for(var i=0;i<5;i++){
-			if(i===2)
-			{
-				console.log(i);
-			}
-
+		console.log(json);
+		if(json===null){
+			return false;
 		}
-		
-		return null;
+		else{
+			return true;
+		}		
 	}
 }
 
