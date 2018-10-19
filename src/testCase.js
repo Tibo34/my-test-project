@@ -17,13 +17,19 @@ class testCase {
 
 	// TODO but not like this : https://www.monkeyuser.com/2017/todo/
 	getExecutions(){
-		console.log(json);
-		if(json===null){
-			return false;
+		
+		var obj=JSON.parse(this.json);		
+		if(obj.executions){
+			if(typeof(obj.executions)==="object"){				
+				return obj.executions;
+			}
+			else{
+				return false;
+			}
 		}
 		else{
-			return true;
-		}		
+			return false;
+		}	
 	}
 }
 
