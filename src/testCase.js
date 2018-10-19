@@ -1,4 +1,4 @@
-class testCase {
+class testCase {	 
 	constructor(json) {
 		this.json = json;
 	}
@@ -17,7 +17,19 @@ class testCase {
 
 	// TODO but not like this : https://www.monkeyuser.com/2017/todo/
 	getExecutions(){
-		return null;
+		
+		var obj=JSON.parse(this.json);		
+		if(obj.executions){
+			if(typeof(obj.executions)==="object"){				
+				return obj.executions;
+			}
+			else{
+				return false;
+			}
+		}
+		else{
+			return false;
+		}	
 	}
 }
 
