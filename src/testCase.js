@@ -1,4 +1,4 @@
-class testCase {
+class testCase {	 
 	constructor(json) {
 		this.json = json;
 	}
